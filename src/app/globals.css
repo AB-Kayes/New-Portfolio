@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 
-
+/* Hamburger menu animation */
 .mb-nav-links{
     right: -100%;
   }
@@ -61,4 +61,61 @@
     transition-duration: .3s;
     transform-origin: left center;
   }
+}
+
+/* social icons hover effect */
+.Twitter:hover{
+  fill:#1D9BF0;
+  background: white; 
+}
+
+.Facebook:hover{
+  background: #2876dd;
+  fill: white;
+}
+
+.Facebook:active{
+  background: #104993;
+  fill: #dfdfdf;
+}
+
+.Twitter:active{   
+  background: #b1b1b1;
+}
+
+.Instagram:hover{
+  fill: white;
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+.Instagram:active{
+  background: linear-gradient(45deg, #b19750, #974e15, #7a1844, #962fbf, #363e8f); }
+
+.Linkedin:hover{
+  fill: white;
+  background: #0077B5;
+}
+
+.Linkedin:active{
+  background: #083e58;
+}
+
+/* waving hand */
+.hi{
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 1.9s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate( 0.0deg) }
+ 10% { transform: rotate(24.0deg) }
+ 20% { transform: rotate(-14.0deg) }
+ 30% { transform: rotate(24.0deg) }
+ 40% { transform: rotate(-8.0deg) }
+ 50% { transform: rotate(8.0deg) }
+ 60% { transform: rotate( 0.0deg) }
+100% { transform: rotate( 0.0deg) }
 }

@@ -21,7 +21,7 @@ export default function Nav() {
 
     return (
         <>
-  <nav className="flex w-full justify-between fixed text-xl h-16 px-4 z-50 bg-gray-200 bg-opacity-10">
+  <nav className="flex w-full justify-between fixed text-xl h-16 px-4 z-50 backdrop-blur-lg bg-black/10 bg-opacity-10">
     <div className="my-auto">
         <a className="flex items-center" href="./"><img src="/img/Profile 2.png" alt="Logo" className="w-12 block rounded-[50%]"/> <div className="font-bold uppercase ml-2.5">AB.Kayes</div></a>
     </div>
