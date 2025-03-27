@@ -39,7 +39,11 @@ export default function Footer() {
               </svg>
             </a>  
           </div>
-          <div className="email">📧 arifbenkayes@gmail.com</div>
+            <div className="email">
+            <a href="mailto:arifbenkayes@gmail.com" className="text-white">
+              📧 arifbenkayes@gmail.com
+            </a>
+            </div>
         </div>
     </div>
     <div className=" py-4 px-0 text-white text-sm text-center border-t-1 border-white/40">
