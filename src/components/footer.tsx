@@ -50,7 +50,7 @@ export default function Footer() {
       © Copyright
       {new Date().getFullYear()}
       . Made by
-      <a className="underline font-bold text-white m-0.5" target="_blank" href="https://ab-kayes.vercel.app">AB.KAYES</a>
+      <a className="underline font-bold text-white m-0.5" href="https://ab-kayes.vercel.app">AB.KAYES</a>
     </div>
   </footer>
     )

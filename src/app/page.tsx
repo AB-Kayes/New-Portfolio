@@ -1,8 +1,9 @@
 import Nav from "@/components/nav"
 import Footer from "@/components/footer"
-import Projects from "@/components/projects"
+import Projects from "@/components/projects/projects-section"
 import Contact from "@/components/contact"
 import SocialIcons from "@/components/social-icons"
+import About from "@/components/about"
 
 export default function Home() {
 
@@ -24,6 +25,7 @@ export default function Home() {
               </div>
             </div>
       </div>
+    <About/>
     <Projects/>
     <Contact/>
     <Footer/>
