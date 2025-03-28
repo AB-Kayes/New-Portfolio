@@ -3,25 +3,24 @@
 
 @custom-variant dark (&:is(.dark *));
 
-*{
+* {
   /* border: 1px solid red */
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
 /* Hamburger menu animation */
-.mb-nav-links{
-    right: -100%;
-  }
-@media only screen and (max-width: 44rem){
-
-#check{
-    display: none;
+.mb-nav-links {
+  right: -100%;
 }
+@media only screen and (max-width: 44rem) {
+  #check {
+    display: none;
+  }
 
-.check-label {
+  .check-label {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -45,15 +44,15 @@ html{
     transition-duration: .3s;
   }
 
-  #check:checked ~ .mb-nav-links{
-      right: 0;
-  } 
+  #check:checked ~ .mb-nav-links {
+    right: 0;
+  }
 
-  #check:checked + .check-label .bar{
+  #check:checked + .check-label .bar {
     margin-left: 12px;
   }
 
-#check:checked + .check-label #bar2 {
+  #check:checked + .check-label #bar2 {
     transform: rotate(135deg);
     margin-left: 0;
     transform-origin: center;
@@ -74,60 +73,182 @@ html{
 }
 
 /* social icons hover effect */
-.Twitter:hover{
-  fill:#1D9BF0;
-  background: white; 
+.Twitter:hover {
+  fill: #1d9bf0;
+  background: white;
 }
 
-.Facebook:hover{
+.Facebook:hover {
   background: #2876dd;
   fill: white;
 }
 
-.Facebook:active{
+.Facebook:active {
   background: #104993;
   fill: #dfdfdf;
 }
 
-.Twitter:active{   
+.Twitter:active {
   background: #b1b1b1;
 }
 
-.Instagram:hover{
+.Instagram:hover {
   fill: white;
   background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
 }
 
-.Instagram:active{
-  background: linear-gradient(45deg, #b19750, #974e15, #7a1844, #962fbf, #363e8f); }
-
-.Linkedin:hover{
-  fill: white;
-  background: #0077B5;
+.Instagram:active {
+  background: linear-gradient(45deg, #b19750, #974e15, #7a1844, #962fbf, #363e8f);
 }
 
-.Linkedin:active{
+.Linkedin:hover {
+  fill: white;
+  background: #0077b5;
+}
+
+.Linkedin:active {
   background: #083e58;
 }
 
 /* waving hand */
-.hi{
-  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 1.9s;        /* Change to speed up or slow down */
-  animation-iteration-count: infinite;  /* Never stop waving :) */
-  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+.hi {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 1.9s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
 @keyframes wave-animation {
-  0% { transform: rotate( 0.0deg) }
- 10% { transform: rotate(24.0deg) }
- 20% { transform: rotate(-14.0deg) }
- 30% { transform: rotate(24.0deg) }
- 40% { transform: rotate(-8.0deg) }
- 50% { transform: rotate(8.0deg) }
- 60% { transform: rotate( 0.0deg) }
-100% { transform: rotate( 0.0deg) }
+  0% {
+    transform: rotate(0.0deg);
+  }
+  10% {
+    transform: rotate(24.0deg);
+  }
+  20% {
+    transform: rotate(-14.0deg);
+  }
+  30% {
+    transform: rotate(24.0deg);
+  }
+  40% {
+    transform: rotate(-8.0deg);
+  }
+  50% {
+    transform: rotate(8.0deg);
+  }
+  60% {
+    transform: rotate(0.0deg);
+  }
+  100% {
+    transform: rotate(0.0deg);
+  }
+}
+
+/* Skill tag hover effect */
+.skill-tag {
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Project card hover effect */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Button hover animation */
+.animated-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-button:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.animated-button:hover:after {
+  left: 100%;
+}
+
+/* Mobile social icons animations */
+.mobile-social-container {
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s ease;
+}
+
+.social-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.social-hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Individual icon animations */
+.social-icon-link {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.social-visible .social-icon-link {
+  animation-name: bounceIn;
+}
+
+.social-hidden .social-icon-link {
+  animation-name: bounceOut;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-10px);
+  }
+  70% {
+    transform: scale(0.9) translateY(5px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes bounceOut {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(0.9) translateY(5px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-10px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3) translateY(20px);
+  }
 }
 
 :root {
@@ -245,3 +366,24 @@ html{
     @apply bg-background text-foreground;
   }
 }
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+  }
+  h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+  h3 {
+    font-size: clamp(1.25rem, 4vw, 2rem);
+  }
+}
+
+/* Smooth scrolling for all browsers */
+@supports (-webkit-overflow-scrolling: touch) {
+  html {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+

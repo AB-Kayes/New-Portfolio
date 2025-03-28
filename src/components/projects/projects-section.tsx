@@ -1,11 +1,10 @@
-'use client'
+"use client"
 
 import { projects } from "@/data/projects"
 import ProjectCard from "./project-card"
 import { motion } from "framer-motion"
 
 export default function ProjectsSection() {
-
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -33,7 +32,7 @@ export default function ProjectsSection() {
         </div>
 
         <motion.div
-          className="grid gap-10 grid-cols-2"
+          className="grid gap-6 md:gap-10 grid-cols-1 sm:grid-cols-2"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -45,7 +44,6 @@ export default function ProjectsSection() {
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </section>
   )

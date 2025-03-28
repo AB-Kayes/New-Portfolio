@@ -33,7 +33,6 @@ export default function Contact() {
   })
 
   const onSubmit = async (data: FormData) => {
-
     setIsSubmitting(true)
     setSubmitStatus({ type: "idle", message: "" })
 
@@ -57,10 +56,10 @@ export default function Contact() {
     } catch (error: any) {
       console.error("Error sending email:", error)
 
-        setSubmitStatus({
-          type: "error",
-          message: "Failed to send message. Please try again later.",
-        })
+      setSubmitStatus({
+        type: "error",
+        message: "Failed to send message. Please try again later.",
+      })
     } finally {
       setIsSubmitting(false)
     }
@@ -73,7 +72,7 @@ export default function Contact() {
         <div className="w-full md:w-9/12 mx-auto mb-10">
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="py-6 px-8 m-auto max-w-2xl rounded-xl backdrop-blur-sm bg-gray-100 shadow-xl border"
+            className="py-6 px-4 sm:px-8 m-auto max-w-2xl rounded-xl backdrop-blur-sm bg-gray-100 shadow-xl border"
           >
             <div className="text-left mb-4">
               <label htmlFor="name" className="ml-2 block mb-1 font-medium">
@@ -123,7 +122,7 @@ export default function Contact() {
 
             {submitStatus.type !== "idle" && (
               <div
-                className={`p-3 rounded-lg text-center ${
+                className={`mt-4 p-3 rounded-lg text-center ${
                   submitStatus.type === "success" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"
                 }`}
               >
@@ -135,7 +134,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="font-bold text-lg md:text-2xl px-6 md:px-8 py-3 md:py-4 mt-6 md:mt-10 rounded-xl bg-black/5 border-2 border-black/80 shadow-[2px_2px_#202020] hover:relative transition-all hover:right-0.5 hover:bottom-0.5 hover:shadow-[5px_5px_#202020] hover:cursor-pointer active:bg-[#cfcdcd] disabled:opacity-70 disabled:cursor-not-allowed flex items-center gap-2"
+                className="font-bold text-lg md:text-xl px-6 md:px-8 py-3 md:py-4 mt-6 md:mt-8 rounded-xl bg-black/5 border-2 border-black/80 shadow-[2px_2px_#202020] hover:relative transition-all hover:right-0.5 hover:bottom-0.5 hover:shadow-[5px_5px_#202020] hover:cursor-pointer active:bg-[#cfcdcd] disabled:opacity-70 disabled:cursor-not-allowed flex items-center gap-2"
               >
                 {isSubmitting && <Loader2 className="h-5 w-5 animate-spin" />}
                 {isSubmitting ? "Sending..." : "Submit"}
