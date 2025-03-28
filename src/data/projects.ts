@@ -2,9 +2,10 @@ export interface Project {
   id: number
   title: string
   slug: string
-  shortDescription: string
-  description: string
-  image: string
+  shortDescription?: string
+  description?: string
+  images?: string // Added images property
+  imgCount: number // Added imgCount property
   technologies: string[]
   liveUrl?: string
   githubUrl?: string
@@ -17,107 +18,132 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    slug: "e-commerce-platform",
-    shortDescription: "A full-featured e-commerce platform with product management, cart, and checkout.",
-    description:
-      "A comprehensive e-commerce solution built with Next.js and a headless CMS. Features include product catalog, search functionality, shopping cart, user authentication, and secure checkout process with multiple payment options.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Prisma"],
-    liveUrl: "https://example.com/ecommerce",
-    githubUrl: "https://github.com/yourusername/ecommerce",
+    title: "Golden Vault",
+    slug: "golden-vault",
+    shortDescription: "A platform to evaluate and enhance skills through virtual campaigns and challenges.",
+    description: "Golden Vault is a student-founded startup from Daffodil International University, designed to engage and empower both technical and non-technical individuals. It offers virtual campaigns, challenges, and activities to help users grow their skills and achieve career goals.",
+    images: "/img/golden-vault",
+    imgCount: 5,
+    technologies: ["Next.js", "Tailwind CSS", "Node.js", "MongoDB"],
+    liveUrl: "https://goldenvault.org/",
+    githubUrl: "https://github.com/yourusername/golden-vault",
     features: [
       {
-        title: "Product Management",
-        description: "Comprehensive product catalog with categories, filters, and search.",
+        title: "Virtual Campaigns & Challenges",
+        description: "Engaging activities to help users improve and grow their skills."
       },
       {
-        title: "User Authentication",
-        description: "Secure login and registration with social auth options.",
+        title: "Inclusive for All Users",
+        description: "Designed for both technical and non-technical individuals."
       },
       {
-        title: "Payment Processing",
-        description: "Integration with Stripe for secure payment processing.",
+        title: "Affiliate Reseller Program",
+        description: "Users can earn by referring others to the platform."
       },
-    ],
+      {
+        title: "Real-Time Engagement & Tracking",
+        description: "Live tracking of user progress and campaign participation."
+      }
+    ]
   },
   {
     id: 2,
-    title: "Task Management App",
-    slug: "task-management-app",
-    shortDescription: "A collaborative task management application with real-time updates.",
-    description:
-      "A productivity tool that helps teams organize and track their tasks. Features include task creation, assignment, due dates, priority levels, comments, and real-time notifications. The app uses a drag-and-drop interface for intuitive task management.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Express"],
-    liveUrl: "https://example.com/taskapp",
-    githubUrl: "https://github.com/yourusername/taskapp",
+    title: "TitanX",
+    slug: "titanx",
+    shortDescription: "A modern portfolio website showcasing AI-powered solutions and full-stack development expertise.",
+    description: "TitanX is a portfolio website that represents the agency's expertise in AI-powered SaaS, automation, and full-stack development. It is designed for performance, SEO optimization, and a smooth user experience, reflecting cutting-edge digital solutions.",
+    images: "/img/titanx",
+    imgCount: 5,
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Express.js", "MongoDB"],
+    liveUrl: "https://titan10.vercel.app",
+    githubUrl: "https://github.com/yourusername/titanx",
     features: [
       {
-        title: "Drag-and-Drop Interface",
-        description: "Intuitive kanban board for managing tasks across different stages.",
+        title: "Lightning-Fast Performance",
+        description: "Pages are optimized for fast loading with Next.js, ensuring a smooth user experience."
       },
       {
-        title: "Real-time Collaboration",
-        description: "Live updates when team members make changes to tasks.",
+        title: "Clean and Modern UI",
+        description: "A sleek design powered by ShadCN and Tailwind CSS, creating a visually appealing interface."
       },
       {
-        title: "Detailed Analytics",
-        description: "Track productivity and project progress with visual reports.",
+        title: "Engaging Animations",
+        description: "Interactive and smooth animations using Framer Motion, keeping users engaged."
       },
-    ],
+      {
+        title: "SEO-Optimized",
+        description: "The website is optimized for search engines to increase visibility and attract clients."
+      },
+      {
+        title: "Fully Responsive",
+        description: "The site is mobile-friendly and responsive across all devices, ensuring accessibility."
+      }
+    ]
   },
   {
     id: 3,
-    title: "Weather Dashboard",
-    slug: "weather-dashboard",
-    shortDescription: "A weather application with forecasts, maps, and location-based data.",
-    description:
-      "A weather dashboard that provides current conditions and forecasts for any location. The app includes interactive maps, hourly and daily forecasts, and weather alerts. Users can save favorite locations and view historical weather data.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Vue.js", "Vuex", "OpenWeatherMap API", "Chart.js", "Leaflet"],
-    liveUrl: "https://example.com/weather",
-    githubUrl: "https://github.com/yourusername/weather",
+    title: "Vector Power",
+    slug: "vector-power",
+    shortDescription: "A platform showcasing energy-efficient solutions and green technology for the transport sector.",
+    description: "Vector Power is dedicated to transforming the transport and renewable energy industry with sustainable solutions. The company provides high-quality batteries, solar modules, inverters, and vehicle accessories aimed at reducing carbon footprints and improving the lives of transport workers in Bangladesh.",
+    images: "/img/vector-power",
+    imgCount: 4,
+    technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "GSAP"],
+    liveUrl: "https://vector-power-bd.vercel.app/",
+    githubUrl: "https://github.com/yourusername/vector-power",
     features: [
       {
-        title: "Location-based Forecasts",
-        description: "Get weather data for your current location or search for any place.",
+        title: "Fast & SEO-Optimized",
+        description: "Built with Next.js to ensure fast rendering and search engine visibility."
       },
       {
-        title: "Interactive Maps",
-        description: "Visualize weather patterns with interactive map overlays.",
+        title: "Responsive Design",
+        description: "A fully mobile-friendly experience with Tailwind CSS for seamless browsing."
       },
       {
-        title: "Historical Data",
-        description: "Access and compare weather data from previous days and months.",
+        title: "Dynamic Product Showcase",
+        description: "Easily update and showcase a diverse range of energy-efficient products."
       },
-    ],
+      {
+        title: "Enhanced User Experience",
+        description: "A clean, intuitive interface balancing technical details and ease of use."
+      }
+    ]
   },
   {
     id: 4,
-    title: "Fitness Tracker",
-    slug: "fitness-tracker",
-    shortDescription: "A personal fitness tracking application with workout plans and progress monitoring.",
-    description:
-      "A comprehensive fitness application that helps users track their workouts, set goals, and monitor progress. Features include custom workout plans, exercise library with demonstrations, calorie tracking, and performance analytics.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React Native", "Firebase", "Redux", "D3.js", "Expo"],
-    liveUrl: "https://example.com/fitness",
-    githubUrl: "https://github.com/yourusername/fitness",
+    title: "Transparency Portal",
+    slug: "transparency-portal",
+    shortDescription: "A secure and user-friendly platform for tracking government financial spending.",
+    description: "The Transparency Portal is designed to provide real-time tracking of government spending with secure data access and transparent reporting. It allows taxpayers and public users to visualize and understand financial data effortlessly.",
+    images: "/img/transparency-portal",
+    imgCount: 6,
+    technologies: ["React", "Node.js", "Express.js", "MongoDB"],
+    liveUrl: "https://transparency-portal.vercel.app/",
+    githubUrl: "https://github.com/yourusername/transparency-portal",
     features: [
       {
-        title: "Workout Library",
-        description: "Extensive collection of exercises with video demonstrations.",
+        title: "Real-Time Financial Tracking",
+        description: "Monitor government spending updates as they happen."
       },
       {
-        title: "Progress Tracking",
-        description: "Visual charts and graphs to monitor your fitness journey.",
+        title: "Dynamic Data Visualization",
+        description: "Easily understand complex financial data through interactive charts."
       },
       {
-        title: "Custom Workout Plans",
-        description: "Create and follow personalized workout routines.",
+        title: "Cross-Platform Accessibility",
+        description: "Seamlessly access the portal from both desktop and mobile devices."
       },
-    ],
-  },
+      {
+        title: "Secure Authentication",
+        description: "Integrated Firebase authentication for protected user access."
+      },
+      {
+        title: "User-Friendly Interface",
+        description: "Designed for transparency and ease of use for public users."
+      }
+    ]
+  }
+,
 ]
 

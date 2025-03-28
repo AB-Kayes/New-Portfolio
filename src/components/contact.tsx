@@ -1,11 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react" // Removed unused `useEffect`
 import emailjs from "@emailjs/browser"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Loader2, AlertCircle } from "lucide-react"
+import { Loader2 } from "lucide-react" // Removed unused `AlertCircle`
 
 // Validation schema
 const formSchema = z.object({
@@ -73,7 +73,7 @@ export default function Contact() {
         <div className="w-full md:w-9/12 mx-auto mb-10">
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="py-6 px-8 m-auto max-w-2xl rounded-xl backdrop-blur-sm bg-gray-100 shadow-[2px_2px_10px_#0f0f0f8a]"
+            className="py-6 px-8 m-auto max-w-2xl rounded-xl backdrop-blur-sm bg-gray-100 shadow-xl border"
           >
             <div className="text-left mb-4">
               <label htmlFor="name" className="ml-2 block mb-1 font-medium">

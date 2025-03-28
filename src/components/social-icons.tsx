@@ -24,10 +24,10 @@ export default function SocialIcons() {
     ]
 
     return(
-        <div className="hidden grid-rows-4 fixed top-1/4 right-1 p-1.5 gap-2 z-100 backdrop-blur-sm rounded-xl bg-black/10 sm:grid"> 
+        <div className="hidden grid-rows-4 fixed top-1/4 right-1 p-1.5 gap-2 z-100 backdrop-blur-sm rounded-2xl bg-black/5 sm:grid"> 
             {socialLinks.map((link,index)=>(
             <a href={link.link} key={index} className="social-icon-link" target="_blank">
-            <svg className={`${link.title} overflow-visible block w-11 rounded-lg p-2 duration-300`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <svg className={`${link.title} overflow-visible block w-11 rounded-lg p-2 duration-200`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 {link.icon}
              </svg>   
             </a> 

@@ -32,16 +32,16 @@ export default function About() {
           <div className="m-1.25">
             <h3 className="mb-2.5 rounded-lg text-2xl font-bold text-center border-2 border-black">Skills</h3>
             <div className="flex flex-wrap gap-2 text-center">
-            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 bg-[#e9e8e8a2]">Next.js 🌐</div>
-            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 bg-[#e9e8e8a2]">React.js ⚛️</div>
-            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 bg-[#e9e8e8a2]">TypeScript 🔷</div>
-            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 bg-[#e9e8e8a2]">JavaScript ⚡</div>
-            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 bg-[#e9e8e8a2]">MongoDB 🍃</div>
-            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 bg-[#e9e8e8a2]">Express.js 🚀</div>
-            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 bg-[#e9e8e8a2]">HTML5 ✨</div>
-            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 bg-[#e9e8e8a2]">CSS3 🎨</div>
-            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 bg-[#e9e8e8a2]">Git 🧰</div>
-            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 bg-[#e9e8e8a2]">GitHub 🐙</div>         
+            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">Next.js 🌐</div>
+            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">React.js ⚛️</div>
+            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">TypeScript 🔷</div>
+            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">JavaScript ⚡</div>
+            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">MongoDB 🍃</div>
+            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">Express.js 🚀</div>
+            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">HTML5 ✨</div>
+            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">CSS3 🎨</div>
+            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">Git 🧰</div>
+            <div className="flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">GitHub 🐙</div>         
             </div>
           </div>
         </div>

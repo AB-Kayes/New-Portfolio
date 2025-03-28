@@ -1,3 +1,5 @@
+'use client'
+
 import { projects } from "@/data/projects"
 import ProjectCard from "./project-card"
 import { motion } from "framer-motion"
@@ -20,18 +22,18 @@ export default function ProjectsSection() {
   }
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20 max-w-10/12 mx-auto">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">My Projects</h2>
-          <p className="mx-auto max-w-2xl text-gray-600 dark:text-gray-400">
+          <p className="mx-auto max-w-2xl text-gray-600">
             Here are some of my recent projects. Each one was built to solve a specific problem and showcase different
             skills.
           </p>
         </div>
 
         <motion.div
-          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-10 grid-cols-2"
           variants={container}
           initial="hidden"
           whileInView="show"
