@@ -110,6 +110,16 @@ html {
   background: #083e58;
 }
 
+.Github:hover {
+  fill: white;
+  background: black;
+}
+
+.Github:active {
+  fill: #e0e0e0;
+  background: #3a3a3a;
+}
+
 /* waving hand */
 .hi {
   animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
@@ -214,6 +224,36 @@ html {
 }
 
 .social-hidden .social-icon-link {
+  animation-name: bounceOut;
+}
+
+/* Add desktop-social-container animations */
+.desktop-social-container {
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s ease;
+}
+
+.desktop-social-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.desktop-social-hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Reuse individual icon animations for desktop */
+.desktop-social-icon-link {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.desktop-social-visible .desktop-social-icon-link {
+  animation-name: bounceIn;
+}
+
+.desktop-social-hidden .desktop-social-icon-link {
   animation-name: bounceOut;
 }
 
@@ -364,19 +404,6 @@ html {
   }
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-/* Responsive typography */
-@media (max-width: 640px) {
-  h1 {
-    font-size: clamp(2.5rem, 8vw, 5rem);
-  }
-  h2 {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-  }
-  h3 {
-    font-size: clamp(1.25rem, 4vw, 2rem);
   }
 }
 

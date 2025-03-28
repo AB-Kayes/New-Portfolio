@@ -4,11 +4,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, ExternalLink, Github } from "lucide-react"
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
+import type { Metadata } from "next"
 
 interface ProjectPageProps {
-  params: {
-    slug: string
-  }
+  params: Promise<{ slug: string }> // Update `params` to be a Promise type
 }
 
 export function generateStaticParams() {
@@ -17,8 +16,30 @@ export function generateStaticParams() {
   }))
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projects.find((p) => p.slug === params.slug)
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata>{
+  const resolvedParams = await params
+  const project = projects.find((p) => p.slug === resolvedParams.slug)
+
+  if (!project) {
+    return {
+      title: "Project Not Found",
+      description: "The project you are looking for does not exist.",
+    }
+  }
+
+  return {
+    title: `${project.title} - My Portfolio`,
+    description: project.description,
+  }
+}
+
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const resolvedParams = await params // Await the `params` promise
+  const project = projects.find((p) => p.slug === resolvedParams.slug)
 
   if (!project) {
     notFound()

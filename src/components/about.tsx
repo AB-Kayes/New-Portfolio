@@ -5,8 +5,8 @@ export default function About() {
         <h2 className="text-3xl font-bold text-center mb-8">About me</h2>
         <div className="grid grid-cols-1 lg:grid-cols-[2.5fr_1fr] gap-6">
           <div className="m-1.25">
-            <h3 className="mb-2.5 rounded-lg text-2xl font-bold text-center border-2 border-black">Get to know me!</h3>
-            <p className="text-left p-2.5 rounded-lg border-2 border-black">
+            <h3 className="mb-2.5 rounded-lg text-2xl font-bold text-center border-2 border-foreground">Get to know me!</h3>
+            <p className="text-left p-2.5 rounded-lg border-2 border-foreground">
               I'm a <strong>Full-Stack</strong> web developer specializing in <strong>Next.js</strong> 🌐 and{" "}
               <strong>React.js</strong> ⚛️, with a strong focus on building dynamic and scalable applications that
               prioritize performance ⚡ and user experience 🧑‍💻 🎯. Proficient in <strong>TypeScript</strong> 🔷,{" "}
@@ -24,36 +24,36 @@ export default function About() {
             </p>
           </div>
           <div className="m-1.25">
-            <h3 className="mb-2.5 rounded-lg text-2xl font-bold text-center border-2 border-black">Skills</h3>
+            <h3 className="mb-2.5 rounded-lg text-2xl font-bold text-center border-2 border-foreground">Skills</h3>
             <div className="flex flex-wrap gap-2 text-center">
-              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">
+              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-accent">
                 Next.js 🌐
               </div>
-              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">
+              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-accent">
                 React.js ⚛️
               </div>
-              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">
+              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-accent">
                 TypeScript 🔷
               </div>
-              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">
+              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-accent">
                 JavaScript ⚡
               </div>
-              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">
+              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-accent">
                 MongoDB 🍃
               </div>
-              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">
+              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-accent">
                 Express.js 🚀
               </div>
-              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">
+              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-accent">
                 HTML5 ✨
               </div>
-              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">
+              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-accent">
                 CSS3 🎨
               </div>
-              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">
+              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-accent">
                 Git 🧰
               </div>
-              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-gray-100">
+              <div className="skill-tag flex-grow flex-basis-content font-bold py-3 px-4 rounded-md max-w-68 min-w-20 shadow-sm bg-accent">
                 GitHub 🐙
               </div>
             </div>

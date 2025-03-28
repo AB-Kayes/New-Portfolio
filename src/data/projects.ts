@@ -27,7 +27,7 @@ export const projects: Project[] = [
     imgCount: 5,
     technologies: ["Next.js", "Tailwind CSS", "Node.js", "MongoDB"],
     liveUrl: "https://goldenvault.org/",
-    githubUrl: "https://github.com/yourusername/golden-vault",
+    githubUrl: "https://github.com/official-goldenvault/Golden-Vault---full-system/tree/dev-kayes",
     features: [
       {
         title: "Virtual Campaigns & Challenges",
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     imgCount: 5,
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Express.js", "MongoDB"],
     liveUrl: "https://titan10.vercel.app",
-    githubUrl: "https://github.com/yourusername/titanx",
+    githubUrl: "https://github.com/AB-Kayes/titanx",
     features: [
       {
         title: "Lightning-Fast Performance",
@@ -94,7 +94,7 @@ export const projects: Project[] = [
     imgCount: 4,
     technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "GSAP"],
     liveUrl: "https://vector-power-bd.vercel.app/",
-    githubUrl: "https://github.com/yourusername/vector-power",
+    githubUrl: "https://github.com/vectorpowerbd/vector-power-bd",
     features: [
       {
         title: "Fast & SEO-Optimized",
@@ -125,7 +125,7 @@ export const projects: Project[] = [
     imgCount: 6,
     technologies: ["React", "Node.js", "Express.js", "MongoDB"],
     liveUrl: "https://transparency-portal.vercel.app/",
-    githubUrl: "https://github.com/yourusername/transparency-portal",
+    githubUrl: "https://github.com/AB-Kayes/transparency-management-system",
     features: [
       {
         title: "Real-Time Financial Tracking",

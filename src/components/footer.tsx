@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="footer bg-black text-white p-2.5">
+    <footer className="footer bg-foreground text-background/90 p-2.5">
       <div className="flex flex-col md:flex-row justify-between m-2.5 pb-5 gap-6 md:gap-0">
         <div className="w-full md:w-3/5 max-w-[580px]">
           <h2 className="text-left px-2.5 py-0 text-2xl font-bold">AB.KAYES</h2>
@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="flex py-2.5 gap-2">
             <a href="https://x.com/ArifKayes67910?t=buAfAQLajtphY5qp7ZZyHQ&s=09" target="_blank" rel="noreferrer">
               <svg
-                className="overflow-visible block w-8 rounded-lg p-2 fill-white duration-300 hover:bg-white/20 active:fill-white/40"
+                className="overflow-visible block w-8 rounded-lg p-2 fill-background/90 duration-300 hover:bg-background/20 active:fill-background/40"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -24,7 +24,7 @@ export default function Footer() {
             </a>
             <a href="https://www.instagram.com/arifbenkayes?igsh=MTkyeXMycHg3Y2Z3Zw==" target="_blank" rel="noreferrer">
               <svg
-                className="overflow-visible block w-8 rounded-lg p-2 fill-white duration-300 hover:bg-white/20 active:fill-white/40"
+                className="overflow-visible block w-8 rounded-lg p-2 fill-background/90 duration-300 hover:bg-background/20 active:fill-background/40"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -33,7 +33,7 @@ export default function Footer() {
             </a>
             <a href="https://www.facebook.com/arifben.kayes" target="_blank" rel="noreferrer">
               <svg
-                className="overflow-visible block w-8 rounded-lg p-2 fill-white duration-300 hover:bg-white/20 active:fill-white/40"
+                className="overflow-visible block w-8 rounded-lg p-2 fill-background/90 duration-300 hover:bg-background/20 active:fill-background/40"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -42,7 +42,7 @@ export default function Footer() {
             </a>
             <a href="https://www.linkedin.com/in/ab-kayes-5b8359232" target="_blank" rel="noreferrer">
               <svg
-                className="overflow-visible block w-8 rounded-lg p-2 fill-white duration-300 hover:bg-white/20 active:fill-white/40"
+                className="overflow-visible block w-8 rounded-lg p-2 fill-background/90 duration-300 hover:bg-background/20 active:fill-background/40"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -51,7 +51,7 @@ export default function Footer() {
             </a>
             <a href="https://github.com/AB-Kayes" target="_blank" rel="noreferrer">
               <svg
-                className="overflow-visible block w-8 rounded-lg p-2 fill-white duration-300 hover:bg-white/20 active:fill-white/40"
+                className="overflow-visible block w-8 rounded-lg p-2 fill-background/90 duration-300 hover:bg-background/20 active:fill-background/40"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -60,16 +60,15 @@ export default function Footer() {
             </a>
           </div>
           <div className="email">
-            <a href="mailto:arifbenkayes@gmail.com" className="text-white">
+            <a href="mailto:arifbenkayes@gmail.com" className="text-background/90">
               📧 arifbenkayes@gmail.com
             </a>
           </div>
         </div>
       </div>
-      <div className=" py-4 px-0 text-white text-sm text-center border-t border-white/40">
-        © Copyright
-        {new Date().getFullYear()}. Made by
-        <a className="underline font-bold text-white m-0.5" href="https://ab-kayes.vercel.app">
+      <div className=" py-4 px-0 text-background/90 text-sm text-center border-t border-background/40">
+        © Copyright <span> {new Date().getFullYear()} </span>. Made by
+        <a className="underline font-bold text-background/90 m-0.5" href="https://ab-kayes.vercel.app">
           AB.KAYES
         </a>
       </div>

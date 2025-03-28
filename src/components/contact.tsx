@@ -72,7 +72,7 @@ export default function Contact() {
         <div className="w-full md:w-9/12 mx-auto mb-10">
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="py-6 px-4 sm:px-8 m-auto max-w-2xl rounded-xl backdrop-blur-sm bg-gray-100 shadow-xl border"
+            className="py-6 px-4 sm:px-8 m-auto max-w-2xl rounded-xl backdrop-blur-sm bg-muted shadow-xl border"
           >
             <div className="text-left mb-4">
               <label htmlFor="name" className="ml-2 block mb-1 font-medium">
@@ -81,12 +81,12 @@ export default function Contact() {
               <input
                 type="text"
                 id="name"
-                className="w-full p-3 rounded-xl border-none bg-white outline-none focus:ring-2 focus:ring-black/30"
+                className="w-full p-3 rounded-lg border-none bg-background outline-none focus:ring-2 focus:ring-ring"
                 {...form.register("name")}
                 placeholder="Enter your name..."
               />
               {form.formState.errors.name && (
-                <p className="text-red-600 text-sm mt-1">{form.formState.errors.name.message}</p>
+                <p className="text-destructive text-sm mt-1">{form.formState.errors.name.message}</p>
               )}
             </div>
             <div className="text-left mb-4">
@@ -96,12 +96,12 @@ export default function Contact() {
               <input
                 type="email"
                 id="email"
-                className="w-full p-3 rounded-xl border-none bg-white outline-none focus:ring-2 focus:ring-black/30"
+                className="w-full p-3 rounded-xl border-none bg-background outline-none focus:ring-2 focus:ring-ring"
                 {...form.register("email")}
                 placeholder="Enter email..."
               />
               {form.formState.errors.email && (
-                <p className="text-red-600 text-sm mt-1">{form.formState.errors.email.message}</p>
+                <p className="text-destructive text-sm mt-1">{form.formState.errors.email.message}</p>
               )}
             </div>
             <div className="text-left">
@@ -109,21 +109,21 @@ export default function Contact() {
                 Message
               </label>
               <textarea
-                className="w-full p-3 md:p-4 rounded-xl border-none bg-white outline-none overflow-auto resize-none focus:ring-2 focus:ring-black/30"
+                className="w-full p-3 md:p-4 rounded-xl border-none bg-background outline-none overflow-auto resize-none focus:ring-2 focus:ring-ring"
                 id="message"
                 {...form.register("message")}
                 rows={6}
                 placeholder="Write your message..."
               ></textarea>
               {form.formState.errors.message && (
-                <p className="text-red-600 text-sm mt-1">{form.formState.errors.message.message}</p>
+                <p className="text-destructive text-sm mt-1">{form.formState.errors.message.message}</p>
               )}
             </div>
 
             {submitStatus.type !== "idle" && (
               <div
                 className={`mt-4 p-3 rounded-lg text-center ${
-                  submitStatus.type === "success" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"
+                  submitStatus.type === "success" ? "bg-green-100 text-green-800" : "bg-red-100 text-destructive"
                 }`}
               >
                 {submitStatus.message}
@@ -134,7 +134,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="font-bold text-lg md:text-xl px-6 md:px-8 py-3 md:py-4 mt-6 md:mt-8 rounded-xl bg-black/5 border-2 border-black/80 shadow-[2px_2px_#202020] hover:relative transition-all hover:right-0.5 hover:bottom-0.5 hover:shadow-[5px_5px_#202020] hover:cursor-pointer active:bg-[#cfcdcd] disabled:opacity-70 disabled:cursor-not-allowed flex items-center gap-2"
+                className="font-bold text-lg md:text-xl px-6 md:px-8 py-3 md:py-4 mt-6 md:mt-8 rounded-xl bg-foreground/5 border-2 border-foreground/80 shadow-[2px_2px_#202020] hover:relative transition-all hover:bg-foreground/10 hover:right-0.5 hover:bottom-0.5 hover:shadow-[5px_5px_#202020] hover:cursor-pointer active:bg-[#cfcdcd] active:right-0 active:bottom-0 active:shadow-[2px_2px_#202020] disabled:opacity-70 disabled:cursor-not-allowed flex items-center gap-2"
               >
                 {isSubmitting && <Loader2 className="h-5 w-5 animate-spin" />}
                 {isSubmitting ? "Sending..." : "Submit"}
