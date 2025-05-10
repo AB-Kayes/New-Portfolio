@@ -18,37 +18,6 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Golden Vault",
-    slug: "golden-vault",
-    shortDescription: "A platform to evaluate and enhance skills through virtual campaigns and challenges.",
-    description:
-      "Golden Vault is a student-founded startup from Daffodil International University, designed to engage and empower both technical and non-technical individuals. It offers virtual campaigns, challenges, and activities to help users grow their skills and achieve career goals.",
-    images: "/img/golden-vault",
-    imgCount: 5,
-    technologies: ["Next.js", "Tailwind CSS", "Node.js", "MongoDB"],
-    liveUrl: "https://goldenvault.org/",
-    githubUrl: "https://github.com/official-goldenvault/Golden-Vault---full-system/tree/dev-kayes",
-    features: [
-      {
-        title: "Virtual Campaigns & Challenges",
-        description: "Engaging activities to help users improve and grow their skills.",
-      },
-      {
-        title: "Inclusive for All Users",
-        description: "Designed for both technical and non-technical individuals.",
-      },
-      {
-        title: "Affiliate Reseller Program",
-        description: "Users can earn by referring others to the platform.",
-      },
-      {
-        title: "Real-Time Engagement & Tracking",
-        description: "Live tracking of user progress and campaign participation.",
-      },
-    ],
-  },
-  {
-    id: 2,
     title: "TitanX",
     slug: "titanx",
     shortDescription:
@@ -84,7 +53,74 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 2,
+    title: "Roshan Transport",
+    slug: "roshan-transport",
+    shortDescription:
+      "A professional transport company website built with performance, responsiveness, and easy content management in mind.",
+    description:
+      "Roshan Transport is a clean and responsive website developed for a logistics and transport service provider. Built with Next.js and Tailwind CSS, it ensures fast performance, SEO optimization, and a seamless browsing experience. TinaCMS integration allows easy content updates directly from the interface, making the platform dynamic and client-friendly.",
+    images: "/img/roshan-transport",
+    imgCount: 9, // Adjust based on your actual image count
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "TinaCMS"],
+    liveUrl: "https://roshan-transport.vercel.app/",
+    githubUrl: "https://github.com/AB-Kayes/roshan-transport", // Update if needed
+    features: [
+      {
+        title: "Fast and Lightweight",
+        description: "Built with Next.js for quick load times and efficient routing.",
+      },
+      {
+        title: "Modern UI Design",
+        description: "Designed using Tailwind CSS to deliver a sleek and professional look.",
+      },
+      {
+        title: "CMS Integration",
+        description: "TinaCMS enables easy real-time editing and content management for the client.",
+      },
+      {
+        title: "Fully Responsive",
+        description: "The website adapts seamlessly across mobile, tablet, and desktop devices.",
+      },
+      {
+        title: "SEO-Friendly",
+        description: "Optimized structure and metadata to support search engine visibility.",
+      },
+    ],
+  },
+  {
     id: 3,
+    title: "Golden Vault",
+    slug: "golden-vault",
+    shortDescription: "A platform to evaluate and enhance skills through virtual campaigns and challenges.",
+    description:
+      "Golden Vault is a student-founded startup from Daffodil International University, designed to engage and empower both technical and non-technical individuals. It offers virtual campaigns, challenges, and activities to help users grow their skills and achieve career goals.",
+    images: "/img/golden-vault",
+    imgCount: 5,
+    technologies: ["Next.js", "Tailwind CSS", "Node.js", "MongoDB"],
+    liveUrl: "https://goldenvault.org/",
+    githubUrl: "https://github.com/official-goldenvault/Golden-Vault---full-system/tree/dev-kayes",
+    features: [
+      {
+        title: "Virtual Campaigns & Challenges",
+        description: "Engaging activities to help users improve and grow their skills.",
+      },
+      {
+        title: "Inclusive for All Users",
+        description: "Designed for both technical and non-technical individuals.",
+      },
+      {
+        title: "Affiliate Reseller Program",
+        description: "Users can earn by referring others to the platform.",
+      },
+      {
+        title: "Real-Time Engagement & Tracking",
+        description: "Live tracking of user progress and campaign participation.",
+      },
+    ],
+  },
+  {
+    id: 4,
     title: "Vector Power",
     slug: "vector-power",
     shortDescription: "A platform showcasing energy-efficient solutions and green technology for the transport sector.",
@@ -115,7 +151,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Transparency Portal",
     slug: "transparency-portal",
     shortDescription: "A secure and user-friendly platform for tracking government financial spending.",
