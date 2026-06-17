@@ -46,7 +46,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <main className="container mx-auto px-4 py-20 max-w-11/12">
+    <main className="container mx-auto px-4 py-4 max-w-11/12">
       <Link
         href="/#projects"
         className="mb-8 inline-flex items-center text-sm font-medium text-gray-600 hover:text-gray-900"
