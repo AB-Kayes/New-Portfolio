@@ -20,7 +20,7 @@ export default function Home() {
             Developer & SaaS Builder
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mt-6 max-w-xl mx-auto">
-            I build and ship production SaaS products — from React dashboards to Spring Boot microservices to AI-powered workflows.
+            Full-stack engineer with 5+ years of experience building and shipping production web platforms, SaaS products, and AI-powered workflows.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-8">
             <a href="#projects">

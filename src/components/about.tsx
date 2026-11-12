@@ -5,17 +5,15 @@ import { Download } from "lucide-react"
 
 const skills = [
   // Frontend
-  "React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3",
+  "React", "React Flow", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS",
   // Backend
-  "Node.js", "Express.js", "NestJS", "Java", "Spring Boot", "Python", "FastAPI",
-  // Database
-  "PostgreSQL", "MongoDB", "Redis",
-  // DevOps
-  "Docker", "Git", "Vercel", "Nginx",
+  "Java", "Spring Boot", "Node.js", "NestJS", "FastAPI", "Python", "Laravel", "REST APIs",
+  // Data & Infrastructure
+  "PostgreSQL", "MongoDB", "Redis", "Docker", "Nginx", "Git", "CI/CD",
   // AI/ML
-  "RAG Pipelines", "LangChain", "LLM Integration", "Prompt Engineering",
-  // Other
-  "JWT Auth", "Firebase", "Stripe", "Framer Motion", "React Flow",
+  "RAG", "LangChain", "LLM Integration",
+  // Security & Integrations
+  "JWT", "OAuth 2.0", "Role-Based Access Control", "2FA", "Stripe", "Firebase",
 ]
 
 export default function About() {
@@ -38,19 +36,19 @@ export default function About() {
           {/* Story */}
           <div className="lg:col-span-3 space-y-4">
             <p className="text-muted-foreground leading-relaxed">
-              I'm a full-stack developer who builds and ships SaaS products end-to-end — from React dashboards to Spring Boot microservices to AI-powered workflows. With professional experience across agency, startup, and founder settings, I bring both technical depth and ownership mentality to every project.
+              I'm a full-stack engineer with <strong className="text-foreground">5+ years of freelance and agency experience</strong> building and shipping production web platforms, SaaS products, and AI-powered systems. I specialize in React frontends and Spring Boot, NestJS, and FastAPI backends, with hands-on experience integrating LLMs, building secure authentication, and designing multi-tenant architecture.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              At <strong className="text-foreground">AaladinAI</strong>, a software agency serving international clients, I was hired as a Frontend Engineer but quickly became the person who understood the entire project better than anyone else on the team. When we lost our product manager, I stepped up — coordinating priorities, defining requirements, and driving timelines for <strong className="text-foreground">Fuel AI</strong>, a 24+ page AI-powered CRM with multi-platform communication and a drag-and-drop AI workflow builder.
+              At <strong className="text-foreground">AaladinAI</strong>, a software development agency delivering contracted projects for international clients like <strong className="text-foreground">ScaleBuild AI (USA)</strong>, I served as Full-Stack Developer & Project Lead. I built the frontend for <strong className="text-foreground">fuelAI</strong> (an AI CRM platform serving 600+ users with 24 screens and a node-based workflow editor using React Flow), shipped NestJS backend endpoints and Python AI integrations, and implemented JWT authentication, role-based access control, and 2FA backup codes while coordinating sprints and delivery.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Before that, I helped transform <strong className="text-foreground">Golden Vault</strong> from a concept into a working product as a founding team member — rebuilding the entire frontend and building the mentorship system from scratch.
+              At <strong className="text-foreground">Golden Vault</strong>, a challenge-based learning and mentorship platform, I redesigned and rebuilt the entire UI/UX across all 6 pages from scratch, created mentorship booking and admin tools supporting nine mentors through public launch, and improved the Lighthouse performance score from 58 to 95 through code splitting, image optimization, and server-side rendering.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Right now, I'm building <strong className="text-foreground">Nexus Agent</strong> — a multi-tenant messaging SaaS platform that routes messages across Email, WhatsApp, Discord, and Notion through a single API. The Connection Brain is production-ready with Spring Boot 3.x, hexagonal architecture, circuit breakers, AES-256-GCM encryption, and 68+ passing tests.
+              Right now, I'm building <strong className="text-foreground">AutoPings</strong> — an independent multi-tenant messaging SaaS platform that unifies business communication across Email, WhatsApp, and Discord through a single REST API. Built with Java 21, Spring Boot, and PostgreSQL, it features circuit breakers, rate limiting, encrypted credentials, hashed API keys, and 68+ unit and integration tests with a Docker Compose dev setup.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I'm pursuing my B.Sc in Software Engineering at Daffodil International University and am open to <strong className="text-foreground">full-stack developer roles</strong> — remote or Dhaka-based. I'm also available for freelance projects.
+              Over 5+ years of freelance engineering (Dec 2019 – Present), I've developed full-stack web platforms, mobile applications, and native tools using Java, Python, and React for clients across North America and Europe. I'm pursuing my B.Sc in Software Engineering at Daffodil International University and actively seeking <strong className="text-foreground">remote full-stack roles</strong>.
             </p>
 
             {/* CTA buttons */}
@@ -90,7 +88,7 @@ export default function About() {
             {/* Quick stats */}
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div className="rounded-lg border border-border p-4 text-center">
-                <div className="text-2xl font-bold text-foreground">3+</div>
+                <div className="text-2xl font-bold text-foreground">5+</div>
                 <div className="text-xs text-muted-foreground mt-1">Years Experience</div>
               </div>
               <div className="rounded-lg border border-border p-4 text-center">
@@ -98,8 +96,8 @@ export default function About() {
                 <div className="text-xs text-muted-foreground mt-1">Projects Shipped</div>
               </div>
               <div className="rounded-lg border border-border p-4 text-center">
-                <div className="text-2xl font-bold text-foreground">2</div>
-                <div className="text-xs text-muted-foreground mt-1">Countries Served</div>
+                <div className="text-2xl font-bold text-foreground">US & EU</div>
+                <div className="text-xs text-muted-foreground mt-1">Client Markets</div>
               </div>
               <div className="rounded-lg border border-border p-4 text-center">
                 <div className="text-2xl font-bold text-foreground">68+</div>

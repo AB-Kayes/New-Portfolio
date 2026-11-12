@@ -1,21 +1,58 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Download, Menu, X } from "lucide-react"
 
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const pathname = usePathname()
 
   const navLinks = [
-    { title: "Home", link: "#intro" },
-    { title: "About", link: "#about" },
-    { title: "Experience", link: "#experience" },
-    { title: "Projects", link: "#projects" },
-    { title: "Contact", link: "#contact" },
+    { title: "Home", link: "/#intro" },
+    { title: "About", link: "/#about" },
+    { title: "Experience", link: "/#experience" },
+    { title: "Projects", link: "/#projects" },
+    { title: "Contact", link: "/#contact" },
   ]
 
-  const handleMobileClick = () => {
+  // Handle smooth scrolling when navigating from a non-home page to a hash on the home page
+  useEffect(() => {
+    if (pathname === "/" && typeof window !== "undefined" && window.location.hash) {
+      const hash = window.location.hash.slice(1)
+      const scrollToHash = () => {
+        const element = document.getElementById(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" })
+        }
+      }
+      scrollToHash()
+      const timer1 = setTimeout(scrollToHash, 50)
+      const timer2 = setTimeout(scrollToHash, 200)
+      return () => {
+        clearTimeout(timer1)
+        clearTimeout(timer2)
+      }
+    }
+  }, [pathname])
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     setMobileOpen(false)
+
+    // If already on the home page, perform an in-page smooth scroll
+    if (pathname === "/" && href.startsWith("/#")) {
+      e.preventDefault()
+      const targetId = href.replace("/#", "")
+      const element = document.getElementById(targetId)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+        window.history.pushState(null, "", href)
+      }
+    }
   }
 
   return (
@@ -23,22 +60,27 @@ export default function Nav() {
       <nav className="flex w-full justify-between fixed top-0 h-16 px-4 sm:px-6 z-50 backdrop-blur-lg bg-background/80 border-b border-border">
         {/* Logo */}
         <div className="my-auto">
-          <a className="flex items-center gap-2.5" href="#intro">
+          <Link
+            className="flex items-center gap-2.5"
+            href="/#intro"
+            onClick={(e) => handleNavClick(e, "/#intro")}
+          >
             <img src="/img/Profile2.png" alt="AB.Kayes" className="w-9 sm:w-10 rounded-full" />
             <span className="font-bold uppercase text-base sm:text-lg tracking-tight">AB.Kayes</span>
-          </a>
+          </Link>
         </div>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-1">
           {navLinks.map((navLink) => (
-            <a
+            <Link
               key={navLink.title}
               href={navLink.link}
+              onClick={(e) => handleNavClick(e, navLink.link)}
               className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground rounded-md hover:bg-muted transition-colors"
             >
               {navLink.title}
-            </a>
+            </Link>
           ))}
           <div className="w-px h-5 bg-border mx-2" />
           <a
@@ -78,14 +120,14 @@ export default function Nav() {
       >
         <div className="flex flex-col p-4 gap-1">
           {navLinks.map((navLink) => (
-            <a
+            <Link
               key={navLink.title}
               href={navLink.link}
-              onClick={handleMobileClick}
+              onClick={(e) => handleNavClick(e, navLink.link)}
               className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground rounded-md hover:bg-muted transition-colors"
             >
               {navLink.title}
-            </a>
+            </Link>
           ))}
           <div className="w-full h-px bg-border my-2" />
           <a

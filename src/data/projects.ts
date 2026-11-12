@@ -20,72 +20,74 @@ export const projects: Project[] = [
   // ── Featured Projects ──
   {
     id: 1,
-    title: "Fuel AI",
+    title: "fuelAI",
     slug: "fuel-ai",
     featured: true,
     shortDescription:
-      "AI-powered CRM platform with multi-platform communication, drag-and-drop workflow builder, and automated lead engagement.",
+      "AI-powered sales engagement platform that learns individual sales representatives' communication styles and automates personalized lead engagement.",
     description:
-      "Fuel AI is a 24+ page AI-powered CRM platform built for Scale Build AI (New York) during my time at AaladinAI. As de facto project lead, I coordinated team priorities, defined requirements, and drove development timelines. I built the entire frontend dashboard using Next.js, React, TypeScript, Tailwind CSS, and ShadCN, contributed to NestJS backend API endpoints, and helped integrate the Python AI brain for automated lead engagement. The platform features a drag-and-drop visual funnel editor (React Flow) that lets non-technical users create AI-driven communication workflows with conditional branching across Email, SMS, LinkedIn, and Messenger.",
+      "fuelAI is an AI-powered sales engagement platform built for ScaleBuild AI (USA) during my time at AaladinAI, serving 600+ users. The platform learns individual sales representatives' communication styles and automates personalized lead engagement, adapting messaging to each representative's tone, vocabulary, and communication patterns. It supports context-aware outreach across email, LinkedIn, SMS, and voicemail, maintaining conversation continuity across channels. As Full-Stack Developer & Project Lead, I built the frontend for the AI CRM platform serving 600+ users (all 24 screens and a node-based workflow editor with React Flow), shipped NestJS backend endpoints and Python AI integrations, and added JWT authentication, role-based access control, and 2FA backup codes.",
     images: "/img/fuel-ai",
-    imgCount: 5,
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "NestJS", "Python", "React Flow", "PostgreSQL"],
+    imgCount: 6,
+    technologies: ["React", "React Flow", "Next.js", "TypeScript", "Tailwind CSS", "NestJS", "Python", "PostgreSQL", "JWT / 2FA"],
+    liveUrl: "https://www.fuelai.com",
     features: [
       {
-        title: "Full Frontend Development",
-        description: "Built the entire 24+ page dashboard with Next.js, React, TypeScript, and Tailwind CSS.",
+        title: "AI-Driven Personalization",
+        description: "Adapts messaging dynamically to each sales representative's tone, vocabulary, and communication patterns.",
       },
       {
-        title: "Visual Funnel Builder",
-        description: "Drag-and-drop workflow editor (React Flow) for non-technical users to create AI communication flows.",
+        title: "Context-Aware Outreach",
+        description: "Maintains conversation continuity across email, LinkedIn, SMS, and voicemail.",
       },
       {
-        title: "Multi-Channel Communication",
-        description: "Unified inbox routing messages across Email, SMS, LinkedIn, and Messenger.",
+        title: "Node-Based Workflow Editor",
+        description: "Built all 24 screens and a visual drag-and-drop workflow editor using React Flow for automation branching.",
       },
       {
-        title: "AI Integration",
-        description: "Python AI brain for NLU-based response interpretation and dynamic prompt generation.",
+        title: "Backend & AI Integrations",
+        description: "Shipped NestJS endpoints, Python AI integrations, JWT auth, RBAC, and 2FA backup codes.",
       },
       {
         title: "Project Leadership",
-        description: "Led the project as de facto PM — coordinated priorities, defined requirements, drove timelines.",
+        description: "Turned client requirements into scoped features, planned sprints, and coordinated cross-functional delivery.",
       },
     ],
   },
   {
     id: 2,
-    title: "Nexus Agent",
-    slug: "nexus-agent",
+    title: "AutoPings",
+    slug: "autopings",
     featured: true,
     shortDescription:
-      "Multi-tenant messaging SaaS unifying Email, WhatsApp, Discord, and Notion through a single REST API. Built with Spring Boot hexagonal architecture.",
+      "Multi-tenant messaging SaaS unifying business communication across Email, WhatsApp, and Discord through a single REST API.",
     description:
-      "Nexus Agent is a multi-tenant messaging SaaS platform that unifies business communication across Email, WhatsApp, Discord, Notion, Slack, and SMS through a single REST API. The Connection Brain is production-ready, built with Spring Boot 3.x and Java 21 using hexagonal (Ports & Adapters) architecture. Features include Resilience4j circuit breakers, Bucket4j rate limiting, AES-256-GCM credential encryption, an outbox pattern with exponential backoff retry orchestrator, and 68+ passing tests. The full three-brain architecture includes a Laravel management brain and FastAPI cognitive brain with pgvector RAG.",
-    images: "/img/nexus-agent",
-    imgCount: 5,
-    technologies: ["Java 21", "Spring Boot 3.x", "Hexagonal Architecture", "PostgreSQL 17", "Resilience4j", "Docker", "AES-256-GCM"],
+      "AutoPings is an independent multi-tenant messaging SaaS platform that unifies business communication across Email, WhatsApp, and Discord through a single REST API. As founder and lead architect, I designed and built the multi-tenant backend in Java 21 and Spring Boot using PostgreSQL with dedicated adapters for email, WhatsApp, and Discord. The platform incorporates reliability and security layers including circuit breakers, rate limiting, encrypted credentials, and hashed API keys, backed by 68+ unit and integration tests and a Docker Compose dev setup.",
+    images: "/img/autopings",
+    imgCount: 4,
+    technologies: ["Java 21", "Spring Boot", "PostgreSQL", "Docker", "REST APIs", "Redis", "Resilience4j", "AES-256-GCM"],
+    liveUrl: "https://www.autopings.com",
     githubUrl: "https://github.com/AB-Kayes",
     features: [
       {
-        title: "Hexagonal Architecture",
-        description: "Ports & Adapters pattern for clean separation of business logic from infrastructure.",
+        title: "Multi-Tenant Architecture",
+        description: "Designed a multi-tenant backend (Java 21, Spring Boot, PostgreSQL) with adapters for email, WhatsApp, and Discord.",
       },
       {
-        title: "Multi-Platform Adapters",
-        description: "SendGrid (Email), Meta Cloud API (WhatsApp), JDA 5.x (Discord), Notion API integration.",
+        title: "Unified REST API",
+        description: "Unifies business communication across Email, WhatsApp, and Discord through a single REST API.",
       },
       {
-        title: "Resilience & Security",
-        description: "Circuit breakers, rate limiting, AES-256-GCM encryption, X-API-Key auth with SHA-256 hashing.",
+        title: "Reliability & Resilience",
+        description: "Built-in Resilience4j circuit breakers, Bucket4j rate limiting, and virtual thread async dispatch.",
       },
       {
-        title: "Reliability Patterns",
-        description: "Outbox pattern, exponential backoff retry, virtual thread async dispatch, crash recovery.",
+        title: "Security & Credential Encryption",
+        description: "Encrypted credentials with AES-256-GCM and SHA-256 hashed API keys for bulletproof multi-tenant isolation.",
       },
       {
-        title: "68+ Passing Tests",
-        description: "Full test coverage with unit and integration tests, Docker Compose deployment.",
+        title: "68+ Passing Tests & Docker",
+        description: "Wrote 68+ unit and integration tests; shipped a production-ready Docker Compose dev setup.",
       },
     ],
   },
@@ -95,30 +97,30 @@ export const projects: Project[] = [
     slug: "golden-vault",
     featured: true,
     shortDescription:
-      "Early-stage edtech startup platform for challenge-based learning, mentorship, and performance tracking. Transformed from concept to working product.",
+      "A challenge-based learning and mentorship platform connecting learners with industry professionals.",
     description:
-      "Golden Vault is a student-founded startup from Daffodil International University focused on challenge-based learning, mentorship, and performance tracking. I joined as a frontend developer and collaborated directly with the founding team to transform the platform from concept to a working product. I redesigned the entire UI/UX, rebuilt the frontend with React, Next.js, and Tailwind CSS, and built the complete mentorship system including admin panels for managing mentor-mentee relationships and booking sessions.",
+      "Golden Vault is a challenge-based learning and mentorship platform connecting learners with industry professionals. As a frontend developer, I redesigned and rebuilt the entire UI/UX across all 6 pages from scratch, improving usability, mobile responsiveness, and visual consistency across the platform. I built mentorship booking and admin tools, supporting nine mentors through the platform's public launch, and improved the Lighthouse performance score from 58 to 95 through code splitting, image optimization, and server-side rendering.",
     images: "/img/golden-vault",
     imgCount: 5,
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
     liveUrl: "https://goldenvault.org/",
     githubUrl: "https://github.com/official-goldenvault/Golden-Vault---full-system/tree/dev-kayes",
     features: [
       {
         title: "Complete UI/UX Redesign",
-        description: "Revamped usability, mobile responsiveness, and visual appeal across all key pages.",
+        description: "Redesigned and rebuilt the entire UI/UX across all 6 pages from scratch, improving usability and visual consistency.",
       },
       {
-        title: "Mentorship System",
-        description: "Full admin panel for adding mentors, booking sessions, and managing mentor-mentee relationships.",
-      },
-      {
-        title: "Startup Collaboration",
-        description: "Worked directly with founding team to ship features that transformed concept to product.",
+        title: "Mentorship Booking & Admin Tools",
+        description: "Built mentorship booking and admin tools, supporting nine mentors through the platform's public launch.",
       },
       {
         title: "Performance Optimization",
-        description: "Improved page load speed, navigation flow, and learner retention.",
+        description: "Improved Lighthouse performance score from 58 to 95 through code splitting, image optimization, and server-side rendering.",
+      },
+      {
+        title: "Startup Collaboration",
+        description: "Collaborated directly with the founding team to transform early concepts into a live production product.",
       },
     ],
   },
@@ -130,14 +132,14 @@ export const projects: Project[] = [
     shortDescription:
       "Modern agency website showcasing AI-powered solutions, full-stack development, and international client work.",
     description:
-      "The official website of AaladinAI, a software development agency serving international clients including Scale Build AI (New York). Built with Next.js and Tailwind CSS, it features a modern landing page with services, projects, about, and contact sections. The site represents the agency's expertise in AI-powered SaaS, automation, and full-stack development.",
+      "The official website of AaladinAI, a software development agency delivering contracted projects for international clients like ScaleBuild AI (USA). Built with Next.js and Tailwind CSS, it features a modern landing page with services, projects, about, and contact sections. The site represents the agency's expertise in AI-powered SaaS, automation, and full-stack development.",
     images: "/img/aaladinai",
     imgCount: 5,
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     features: [
       {
         title: "Modern Agency Presentation",
-        description: "Sleek design showcasing agency capabilities and international client work.",
+        description: "Sleek design showcasing agency capabilities and international client work like ScaleBuild AI (USA).",
       },
       {
         title: "Performance & SEO",
